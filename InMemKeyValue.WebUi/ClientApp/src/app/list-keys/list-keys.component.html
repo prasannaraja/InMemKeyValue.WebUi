@@ -1,0 +1,20 @@
+<h1>List Key Value pairs</h1>
+
+<p *ngIf="!kvpModel"><em>Loading...</em></p>
+
+<table class='table' *ngIf="kvp">
+  <thead>
+    <tr>
+      <th>col1</th>
+      <th>col2</th>
+      <th>col3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let kvp of kvpModel">
+      <td>{{ kvp._namespace }}</td>
+      <td>{{ kvp.key }}</td>
+      <td>{{ kvp.value }}</td>
+    </tr>
+  </tbody>
+</table>
